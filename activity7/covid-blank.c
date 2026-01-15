@@ -214,15 +214,18 @@ csvBurst(char* csv, char* fields[], const int numFields)
  *  into 'csv', into the struct at 'datap'.
  *
  * We assume:
- *   BLANK
+ *   numFields = 13, with specific content of each field.
  * We return:
- *   BLANK
+ *   true if all fields extract successfully,
+ *   false otherwise.
  * We guarantee:
- *   BLANK
+ *   If successful return, all values of *datap are filled.
  * Caller is responsible for:
- *   BLANK
+ *   providing 'csv', a string holding the original line of data,
+ *   providing fields[numFields], whose entries point into csv,
+ *   providing datap, a pointer to a struct we fill in.
  * Notes:
- *   BLANK
+ *   We do not check the contents of string-valued fields.
  */
 static bool
 extractData(BLANK csv, BLANK fields[], BLANK datap)
@@ -290,7 +293,7 @@ bool str2int(const char string[], int* nump)
   }
 
   if (string == NULL || *string == '\0') {
-    BLANK;
+    *nump = 0;
     return true;
   } else {
     // We use sscanf() to parse a number, expecting there to be no following
@@ -315,7 +318,7 @@ bool str2float(const char string[], float* nump)
   }
 
   if (string == NULL || *string == '\0') {
-    BLANK;
+    *nump = 0;
     return true;
   } else {
     // We use sscanf() to parse a number, expecting there to be no following
