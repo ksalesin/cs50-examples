@@ -1,0 +1,6 @@
+Log Analysis Summary
+====================
+INFO:    34
+WARNING: 6
+ERROR:   6
+Total:   46

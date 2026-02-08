@@ -1,0 +1,46 @@
+2024-01-15 08:00:01 INFO Server starting up
+2024-01-15 08:00:02 INFO Loading configuration from /etc/app/config.yaml
+2024-01-15 08:00:02 INFO Database connection pool initialized (max: 10)
+2024-01-15 08:00:03 INFO Listening on port 8080
+2024-01-15 08:00:15 INFO User login: alice (session: a]f3k29x)
+2024-01-15 08:00:45 INFO User login: bob (session: b8dj42m)
+2024-01-15 08:01:02 WARNING High memory usage: 78%
+2024-01-15 08:01:15 INFO Request processed: GET /api/users (23ms)
+2024-01-15 08:01:18 INFO Request processed: POST /api/orders (156ms)
+2024-01-15 08:02:00 ERROR Connection timeout: database server 10.0.0.5:5432
+2024-01-15 08:02:01 ERROR Failed to execute query: SELECT * FROM orders WHERE status='pending'
+2024-01-15 08:02:05 INFO Retry attempt 1 for database connection
+2024-01-15 08:02:06 INFO Database connection restored
+2024-01-15 08:02:30 INFO User logout: alice
+2024-01-15 08:03:00 WARNING Disk usage: 85%
+2024-01-15 08:03:15 INFO User login: charlie (session: c9vm83p)
+2024-01-15 08:03:45 INFO Request processed: GET /api/products (12ms)
+2024-01-15 08:04:00 INFO Request processed: GET /api/inventory (45ms)
+2024-01-15 08:04:30 ERROR Authentication failed: invalid token for user dave
+2024-01-15 08:05:00 WARNING Rate limit approaching for IP 192.168.1.100 (95/100)
+2024-01-15 08:05:15 INFO Request processed: PUT /api/users/123 (67ms)
+2024-01-15 08:05:30 INFO Cache cleared: product_catalog
+2024-01-15 08:06:00 INFO Scheduled task started: cleanup_expired_sessions
+2024-01-15 08:06:02 INFO Removed 15 expired sessions
+2024-01-15 08:06:30 ERROR File not found: /var/data/reports/daily_2024-01-14.csv
+2024-01-15 08:07:00 WARNING CPU usage spike: 92%
+2024-01-15 08:07:15 INFO CPU usage normalized: 45%
+2024-01-15 08:07:30 INFO User login: eve (session: e2nk56q)
+2024-01-15 08:08:00 INFO Request processed: GET /api/dashboard (234ms)
+2024-01-15 08:08:15 WARNING Slow query detected: 2341ms for analytics aggregation
+2024-01-15 08:08:30 INFO User logout: bob
+2024-01-15 08:09:00 INFO Backup started: incremental
+2024-01-15 08:09:45 INFO Backup completed: 1.2GB transferred
+2024-01-15 08:10:00 ERROR Network unreachable: external API endpoint api.weather.com
+2024-01-15 08:10:15 INFO Fallback to cached weather data
+2024-01-15 08:10:30 INFO Request processed: GET /api/weather (5ms, cached)
+2024-01-15 08:11:00 INFO Health check passed: all services operational
+2024-01-15 08:11:30 WARNING Certificate expiring in 14 days: ssl.example.com
+2024-01-15 08:12:00 INFO User login: frank (session: f7pl91r)
+2024-01-15 08:12:30 INFO Request processed: DELETE /api/orders/456 (89ms)
+2024-01-15 08:13:00 ERROR Permission denied: user frank attempted admin action
+2024-01-15 08:13:15 INFO Security alert logged for user frank
+2024-01-15 08:13:30 INFO User logout: charlie
+2024-01-15 08:14:00 INFO Metrics exported to monitoring system
+2024-01-15 08:14:30 INFO Request processed: GET /api/reports (178ms)
+2024-01-15 08:15:00 INFO Server status: 847 requests processed, 0 errors in last 15 minutes

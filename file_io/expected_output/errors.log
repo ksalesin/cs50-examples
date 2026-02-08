@@ -1,0 +1,7 @@
+2024-01-15 08:02:00 ERROR Connection timeout: database server 10.0.0.5:5432
+2024-01-15 08:02:01 ERROR Failed to execute query: SELECT * FROM orders WHERE status='pending'
+2024-01-15 08:04:30 ERROR Authentication failed: invalid token for user dave
+2024-01-15 08:06:30 ERROR File not found: /var/data/reports/daily_2024-01-14.csv
+2024-01-15 08:10:00 ERROR Network unreachable: external API endpoint api.weather.com
+2024-01-15 08:13:00 ERROR Permission denied: user frank attempted admin action
+
