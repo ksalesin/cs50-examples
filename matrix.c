@@ -1,3 +1,11 @@
+/*
+ * matrix.c
+ * Simple matrix struct and operations for memory & pointers practice.
+ *
+ * Written by Kate Salesin 2026
+ *
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 
